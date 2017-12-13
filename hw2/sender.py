@@ -102,7 +102,7 @@ while True:
 
 
 while True:
-	if not s.sendto(("fin").encode('utf-8'), server_addr):
+	if not s.sendto(("0"*2048).encode('utf-8'), server_addr):
 		print ("send failed")
 	else:
 		print ("send\tfin")
