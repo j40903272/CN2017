@@ -53,7 +53,7 @@ while True:
 	for i in range(1, window+1):
 		data = func.concat(cnt, data)
 		if s.sendto(data, server_addr):
-			if cnt > maxcnt:
+			if cnt == 0 or cnt > maxcnt:
 				print ("send\tdata\t#%d,\twinsize = %d" % (cnt, window))
 			else:
 				print ("resnd\tdata\t#%d,\twinsize = %d" % (cnt, window))
